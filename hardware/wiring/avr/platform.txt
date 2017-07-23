@@ -3,7 +3,7 @@
 # ------------------------------
 
 
-name= Wiring AVR Boards
+name=  AVR Boards
 version=1.5.8
 
 # AVR compile variables
