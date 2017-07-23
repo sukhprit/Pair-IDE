@@ -1,5 +1,5 @@
 # Pair-IDE   
-            Some Modification  by Ajay soni 
+             Modification  by Ajay soni 
                          Aim   :   Energia + wiring + arduino + AI  = Pair IDE  
 I am working for integreight all open source electronics platform  with in the one platform for easy to use 
 for making our projects and development on ideas.
