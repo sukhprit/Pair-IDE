@@ -8,7 +8,7 @@ Pair IDE uses of Arduino , Processing and avr sources.
 Pair IDE also uses of libraries of Wiring ,energia and arduino for integreight with in the IDE
 and third party libraries are also integreighted.
 
-  (This is Non Profit Organization for helping of students and Researcher to making projects and products developments)
+  (This is Non Profit Organization for helping of students and Researcher to making projects and products development)
 
           I am also working  on AI hardware's and robotics hardware's  to make  ideas to Reality.
                   ( Please contribute for development in the hardware's and software )
