@@ -1802,7 +1802,7 @@ clock_div_t clock_prescale_get(void)
 {
     if(bit_is_clear(XDIV, XDIVEN))
     {
-        return 1;
+        return 0;
     }
     else
     {
