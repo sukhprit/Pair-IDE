@@ -4,7 +4,7 @@
 
 pair_2_pulse.name=PAIR 2+ (DIRECT UPLOAD)
 
-pair_2_pulse.upload.protocol=Pair
+pair_2_pulse.upload.protocol=arduino
 pair_2_pulse.upload.maximum_size=30720
 pair_2_pulse.upload.speed=57600
 pair_2_pulse.upload.tool=avrdude
@@ -18,7 +18,7 @@ pair_2_pulse.build.variant=standard
 
 pair_3_pulse.name=PAIR 3+
 
-pair_3_pulse.upload.protocol=Pair
+pair_3_pulse.upload.protocol=arduino
 pair_3_pulse.upload.maximum_size=14336
 pair_3_pulse.upload.speed=19200
 pair_3_pulse.upload.tool=avrdude
@@ -32,7 +32,7 @@ pair_3_pulse.build.variant=standard
 
 pair_+_+.name=PAIR ++A (DIRECT UPLOAD)
 pair_+_+.upload.tool=avrdude
-pair_+_+.upload.protocol=wiring
+pair_+_+.upload.protocol=arduino
 pair_+_+.upload.maximum_size=258048
 pair_+_+.upload.speed=115200
 pair_+_+.build.mcu=atmega2560
@@ -44,7 +44,7 @@ pair_+_+.build.variant=mega
 
 pair_+_B.name=PAIR ++B (DIRECT UPOAD)
 pair_+_B.upload.tool=avrdude
-pair_+_B.upload.protocol=Pair
+pair_+_B.upload.protocol=arduino
 pair_+_B.upload.maximum_size=126976
 pair_+_B.upload.speed=57600
 pair_+_B.build.mcu=atmega1280
@@ -66,7 +66,7 @@ pair_+_u.build.vid=0x2341
 pair_+_u.build.pid=0x8036
 pair_+_u.build.core=Pair
 pair_+_u.build.variant=leonardo
-
+pair_+_u.build.extra_flags={build.usb_flags}
 ##############################################################
 
 pair_+_micro.name=PAIR Micro + (DIRECT UPLOAD)
@@ -111,7 +111,7 @@ pair__i.build.variant=eightanaloginputs
 
 pair__bt.name=PAIR BT+ (DIRECT UPLOAD)
 pair__bt.upload.tool=avrdude
-pair__bt.upload.protocol=Pair
+pair__bt.upload.protocol=arduino
 pair__bt.upload.maximum_size=28672
 pair__bt.upload.speed=19200
 pair__bt.upload.disable_flushing=true
@@ -125,7 +125,7 @@ pair__bt.build.variant=eightanaloginputs
 
 pair__bt!!.name=PAIR BT++ (DIRECT UPLOAD)
 pair__bt!!.upload.tool=avrdude
-pair__bt!!.upload.protocol=Pair
+pair__bt!!.upload.protocol=arduino
 pair__bt!!.upload.maximum_size=14336
 pair__bt!!.upload.speed=19200
 pair__bt!!.upload.disable_flushing=true
@@ -140,7 +140,7 @@ pair__bt!!.build.variant=eightanaloginputs
 
 pair_8.name=PAIR NG+  (DIRECT UPLOAD)
 pair_8.upload.tool=avrdude
-pair_8.upload.protocol=Pair
+pair_8.upload.protocol=arduino
 pair_8.upload.maximum_size=7168
 pair_8.upload.speed=19200
 pair_8.build.mcu=atmega8
