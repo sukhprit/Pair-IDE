@@ -62,6 +62,8 @@
 /* Tested with m168                                       */
 /**********************************************************/
 
+/* $Id$ */
+
 
 /* some includes */
 #include <inttypes.h>
@@ -73,7 +75,7 @@
 
 /* the current avr-libc eeprom functions do not support the ATmega168 */
 /* own eeprom write/read functions are used instead */
-#if !defined(__AVR_ATmega168__) || !defined(__AVR_ATmega328P__) || !defined(__AVR_ATmega328__)
+#if !defined(__AVR_ATmega168__) || !defined(__AVR_ATmega328P__)
 #include <avr/eeprom.h>
 #endif
 
@@ -200,11 +202,6 @@
 #elif defined __AVR_ATmega328P__
 #define SIG2	0x95
 #define SIG3	0x0F
-#define PAGE_SIZE	0x40U	//64 words
-
-#elif defined __AVR_ATmega328__
-#define SIG2	0x95
-#define SIG3	0x14
 #define PAGE_SIZE	0x40U	//64 words
 
 #elif defined __AVR_ATmega162__
@@ -372,7 +369,7 @@ int main(void)
 	UBRRHI = (F_CPU/(BAUD_RATE*16L)-1) >> 8;
 	UCSRA = 0x00;
 	UCSRB = _BV(TXEN)|_BV(RXEN);	
-#elif defined(__AVR_ATmega168__) || defined(__AVR_ATmega328P__) || defined (__AVR_ATmega328__)
+#elif defined(__AVR_ATmega168__) || defined(__AVR_ATmega328P__)
 
 #ifdef DOUBLE_SPEED
 	UCSR0A = (1<<U2X0); //Double speed mode USART0
@@ -561,7 +558,7 @@ int main(void)
 			if (flags.eeprom) {		                //Write to EEPROM one byte at a time
 				address.word <<= 1;
 				for(w=0;w<length.word;w++) {
-#if defined(__AVR_ATmega168__)  || defined(__AVR_ATmega328P__) || defined(__AVR_ATmega328__)
+#if defined(__AVR_ATmega168__)  || defined(__AVR_ATmega328P__)
 					while(EECR & (1<<EEPE));
 					EEAR = (uint16_t)(void *)address.word;
 					EEDR = buff[w];
@@ -583,7 +580,7 @@ int main(void)
 				/* if ((length.byte[0] & 0x01) == 0x01) length.word++;	//Even up an odd number of bytes */
 				if ((length.byte[0] & 0x01)) length.word++;	//Even up an odd number of bytes
 				cli();					//Disable interrupts, just to be sure
-#if defined(EEPE)
+#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega1281__)
 				while(bit_is_set(EECR,EEPE));			//Wait for previous EEPROM writes to complete
 #else
 				while(bit_is_set(EECR,EEWE));			//Wait for previous EEPROM writes to complete
@@ -682,7 +679,7 @@ int main(void)
 					 "rjmp	write_page	\n\t"
 					 "block_done:		\n\t"
 					 "clr	__zero_reg__	\n\t"	//restore zero register
-#if defined(__AVR_ATmega168__) || defined(__AVR_ATmega328P__) || defined(__AVR_ATmega328__) || defined(__AVR_ATmega128__) || defined(__AVR_ATmega1280__) || defined(__AVR_ATmega1281__)
+#if defined __AVR_ATmega168__  || __AVR_ATmega328P__ || __AVR_ATmega128__ || __AVR_ATmega1280__ || __AVR_ATmega1281__ 
 					 : "=m" (SPMCSR) : "M" (PAGE_SIZE) : "r0","r16","r17","r24","r25","r28","r29","r30","r31"
 #else
 					 : "=m" (SPMCR) : "M" (PAGE_SIZE) : "r0","r16","r17","r24","r25","r28","r29","r30","r31"
@@ -715,7 +712,7 @@ int main(void)
 			putch(0x14);
 			for (w=0;w < length.word;w++) {		        // Can handle odd and even lengths okay
 				if (flags.eeprom) {	                        // Byte access EEPROM read
-#if defined(__AVR_ATmega168__) || defined(__AVR_ATmega328P__) || defined(__AVR_ATmega328__)
+#if defined(__AVR_ATmega168__)  || defined(__AVR_ATmega328P__)
 					while(EECR & (1<<EEPE));
 					EEAR = (uint16_t)(void *)address.word;
 					EECR |= (1<<EERE);
@@ -931,7 +928,7 @@ void putch(char ch)
 		while (!(UCSR1A & _BV(UDRE1)));
 		UDR1 = ch;
 	}
-#elif defined(__AVR_ATmega168__) || defined(__AVR_ATmega328P__) || defined (__AVR_ATmega328__)
+#elif defined(__AVR_ATmega168__)  || defined(__AVR_ATmega328P__)
 	while (!(UCSR0A & _BV(UDRE0)));
 	UDR0 = ch;
 #else
@@ -969,7 +966,7 @@ char getch(void)
 		return UDR1;
 	}
 	return 0;
-#elif defined(__AVR_ATmega168__)  || defined(__AVR_ATmega328P__) || defined (__AVR_ATmega328__)
+#elif defined(__AVR_ATmega168__)  || defined(__AVR_ATmega328P__)
 	uint32_t count = 0;
 	while(!(UCSR0A & _BV(RXC0))){
 		/* 20060803 DojoCorp:: Addon coming from the previous Bootloader*/               
@@ -1006,7 +1003,7 @@ void getNch(uint8_t count)
 			while(!(UCSR1A & _BV(RXC1)));
 			UDR1;
 		}
-#elif defined(__AVR_ATmega168__)  || defined(__AVR_ATmega328P__) || defined (__AVR_ATmega328__)
+#elif defined(__AVR_ATmega168__)  || defined(__AVR_ATmega328P__)
 		getch();
 #else
 		/* m8,16,32,169,8515,8535,163 */

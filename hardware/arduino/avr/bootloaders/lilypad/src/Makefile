@@ -1,5 +1,6 @@
 # Makefile for ATmegaBOOT
 # E.Lins, 18.7.2005
+# $Id$
 
 # Instructions
 #
