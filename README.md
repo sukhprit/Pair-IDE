@@ -1,16 +1,13 @@
 # Pair-IDE   
-             Modification & Developed by Ajay soni 
+             Modified & Developed by Ajay soni 
                          Aim   :   Energia + wiring + arduino + AI  = Pair IDE  
-I am working for integreight all open source electronics platform  with in the one platform for easy to use 
-for making our projects and development on ideas.
-Pair IDE is the Modified version of Arduino  to build more  easy  platform for students.
-Pair IDE uses of Arduino , Processing and avr sources.
-Pair IDE also uses of libraries of Wiring ,energia and arduino for integreight with in the IDE
-and third party libraries are also integreighted.
-
-  (This is Non Profit Organization for helping of students and Researcher to making projects and products development)
+I am working on integration of all open source electronics platform which will be easy to use 
+for making  projects and developing ideas.
+Pair IDE is the Modified version of Arduino to build easy  platform for students and it uses Arduino,Processing and AVR sources.
+I have modified and integrated Pair-IDE  so that it contains all libraries of arduino, wiring, energia and my own personal libraries for increasing its productivity.
+  (This is Non Profit Organization for helping  students and Researcher to making projects and products development)
 
           I am also working  on AI hardware's and robotics hardware's  to make  ideas to Reality.
-                  ( Please contribute for development in the hardware's and software )
+                  ( Please contribute for development of the hardware and software )
                    
           Thank you.  
