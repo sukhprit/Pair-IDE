@@ -7,7 +7,7 @@ Pair IDE is the Modified version of Arduino to build easy  platform for students
 I have modified and integrated Pair-IDE  so that it contains libraries of arduino, wiring, energia and my own personal libraries for increasing its productivity.
   (This is Non Profit Organization for helping  students and Researcher to making projects and products development)
 
-          I am also working  on AI hardware's and robotics hardware's  to make  ideas to Reality.
+          I am also working  on AI hardware's and robotics hardware's  to turn  ideas to Reality.
                   ( Please contribute for development of the hardware and software )
                    
           Thank you.  
