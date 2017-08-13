@@ -86,7 +86,7 @@ pair_+_micro.build.variant=pair_+_micro
 
 pair_+_mini.name=PAIR MINI+ (DIRECT UPLOAD)
 pair_+_mini.upload.tool=avrdude
-pair_+_mini.upload.protocol=Pair
+pair_+_mini.upload.protocol=arduino
 pair_+_mini.upload.maximum_size=28672
 pair_+_mini.upload.speed=115200
 pair_+_mini.build.mcu=atmega328p
@@ -98,7 +98,7 @@ pair_+_mini.build.variant=eightanaloginputs
 
 pair__i.name=PAIR MINI ++ (DIRECT UPLOAD)
 pair__i.upload.tool=avrdude
-pair__i.upload.protocol=Pair
+pair__i.upload.protocol=arduino
 pair__i.upload.maximum_size=14336
 pair__i.upload.speed=19200
 pair__i.build.mcu=atmega168
