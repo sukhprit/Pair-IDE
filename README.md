@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Pair-IDE   
              Modified & Developed by Ajay soni 
                          Aim   :   Energia + wiring + arduino + AI  = Pair IDE  
@@ -11,3 +12,7 @@ I have modified and integrated Pair-IDE  so that it contains libraries of arduin
                  
                    
           Thank you.  
+=======
+# Pair-IDE
+Pair Embedded programming platform.
+>>>>>>> 2e44be2779432a8a1135a3d70b5deaee671f0c9b
