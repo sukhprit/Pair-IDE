@@ -151,11 +151,7 @@ pair_8.build.variant=standard
 ##############################################################
 
 
-#
-# For more information see:
-# * https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5---3rd-party-Hardware-specification
-# * https://github.com/arduino/Arduino/wiki/Arduino-Hardware-Cores-migration-guide-from-1.0-to-1.6
-#
+
 
 menu.cpu=Processor
 
@@ -201,9 +197,6 @@ sparki.build.core=sparki_core
 sparki.build.variant=sparki
 
 
-################################################################################
-################################ Servotor32  ###################################
-################################################################################
 servotor32.name=Sparki 32+
 servotor32.vid.0=0x27C2
 servotor32.pid.0=0x0001
