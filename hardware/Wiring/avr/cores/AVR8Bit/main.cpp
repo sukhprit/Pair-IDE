@@ -1,9 +1,9 @@
-#include<Arduino.h>
-#include<wiring.h>
+#include <Wiring.h>
+
 int main(void) 
 {
   // Hardware specific initializations.
-
+  boardInit();
 
   // User defined setup routine
   setup();
@@ -11,4 +11,3 @@ int main(void)
   for (;;)
     loop();
 }
-

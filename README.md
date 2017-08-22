@@ -9,6 +9,7 @@ I have modified and integrated all open source platfrom in Pair-IDE  so that it 
 and my own personal libraries for increasing its productivity.Pair-IDE is Forked from arduino and processing.
   (This is Non Profit Organization for helping  students and Researcher to making projects and products development)
                                           open source hardware  & software commmunity       
+  
                            Pair IDE forked from Arduino and libraries forked from energia / wiring /processing 					
 						  
 		  I am also working  on AI hardware's and robotics hardware's  to turn  ideas to Reality.

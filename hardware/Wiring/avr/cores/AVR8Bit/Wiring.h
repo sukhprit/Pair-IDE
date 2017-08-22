@@ -41,7 +41,7 @@ extern "C" {
 #include <avr/pgmspace.h>
 #include <avr/sleep.h>
 #include <util/delay.h>
-#include<Arduino.h>
+
 #include "WConstants.h"
 #include "Binary.h"
 
@@ -115,7 +115,7 @@ extern "C" {
 #define NOT_A_REG  NULL
 #define NOT_A_PORT 0xFF
 
-#include "pins_arduino.h"
+#include "BoardDefs.h"
 
 /*************************************************************
  * C Core API Functions
