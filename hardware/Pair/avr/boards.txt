@@ -1,402 +1,405 @@
-
-
+##GPLV3 licence
 ##############################################################
-pair_uno.name=Pair UNO PU+
 
-pair_uno.vid.0=0x2341
-pair_uno.pid.0=0x0043
-pair_uno.vid.1=0x2341
-pair_uno.pid.1=0x0001
+PU+.name=Pair  PU+
 
-pair_uno.upload.tool=avrdude
-pair_uno.upload.protocol=arduino
-pair_uno.upload.maximum_size=32256
-pair_uno.upload.maximum_data_size=2048
-pair_uno.upload.speed=115200
 
-pair_uno.bootloader.tool=avrdude
-pair_uno.bootloader.low_fuses=0xFF
-pair_uno.bootloader.high_fuses=0xDE
-pair_uno.bootloader.extended_fuses=0x05
-pair_uno.bootloader.unlock_bits=0x3F
-pair_uno.bootloader.lock_bits=0x0F
-pair_uno.bootloader.file=optiboot/optiboot_atmega328.hex
+PU+.upload.tool=avrdude
+PU+.upload.protocol=arduino
+PU+.upload.maximum_size=32256
+PU+.upload.maximum_data_size=2048
+PU+.upload.speed=115200
 
-pair_uno.build.mcu=atmega328p
-pair_uno.build.f_cpu=16000000L
-pair_uno.build.board=AVR_UNO
-pair_uno.build.core=Pair
-pair_uno.build.variant=standard
+PU+.bootloader.tool=avrdude
+PU+.bootloader.low_fuses=0xFF
+PU+.bootloader.high_fuses=0xDE
+PU+.bootloader.extended_fuses=0x05
+PU+.bootloader.unlock_bits=0x3F
+PU+.bootloader.lock_bits=0x0F
+PU+.bootloader.file=optiboot/optiboot_atmega328.hex
+
+PU+.build.mcu=atmega328p
+PU+.build.f_cpu=16000000L
+PU+.build.board=AVR_UNO
+PU+.build.core=Pair
+PU+.build.variant=standard
 
 ##############################################################
 
-PAIR_NANO.name=Pair Nano PN+
+PD+IDE.name=Pair PD+
 
-PAIR_NANO.upload.tool=avrdude
-PAIR_NANO.upload.protocol=arduino
+PD+IDE.upload.tool=avrdude
+PD+IDE.upload.protocol=arduino
 
-PAIR_NANO.bootloader.tool=avrdude
-PAIR_NANO.bootloader.unlock_bits=0x3F
-PAIR_NANO.bootloader.lock_bits=0x0F
+PD+IDE.bootloader.tool=avrdude
+PD+IDE.bootloader.low_fuses=0xFF
+PD+IDE.bootloader.unlock_bits=0x3F
+PD+IDE.bootloader.lock_bits=0x0F
 
-PAIR_NANO.build.f_cpu=16000000L
-PAIR_NANO.build.board=AVR_NANO
-PAIR_NANO.build.core=Pair 
-PAIR_NANO.build.variant=eightanaloginputs
+PD+IDE.build.f_cpu=16000000L
+PD+IDE.build.board=AVR_DUEMILANOVE
+PD+IDE.build.core=Pair
+PD+IDE.build.variant=standard
 
+PD+IDE.menu.cpu.atmega328=ATmega328
 
-PAIR_NANO.menu.cpu.atmega328=ATmega328
+PD+IDE.menu.cpu.atmega328.upload.maximum_size=30720
+PD+IDE.menu.cpu.atmega328.upload.maximum_data_size=2048
+PD+IDE.menu.cpu.atmega328.upload.speed=57600
 
-PAIR_NANO.menu.cpu.atmega328.upload.maximum_size=30720
-PAIR_NANO.menu.cpu.atmega328.upload.maximum_data_size=2048
-PAIR_NANO.menu.cpu.atmega328.upload.speed=57600
+PD+IDE.menu.cpu.atmega328.bootloader.high_fuses=0xDA
+PD+IDE.menu.cpu.atmega328.bootloader.extended_fuses=0x05
+PD+IDE.menu.cpu.atmega328.bootloader.file=atmega/ATmegaBOOT_168_atmega328.hex
 
-PAIR_NANO.menu.cpu.atmega328.bootloader.low_fuses=0xFF
-PAIR_NANO.menu.cpu.atmega328.bootloader.high_fuses=0xDA
-PAIR_NANO.menu.cpu.atmega328.bootloader.extended_fuses=0x05
-PAIR_NANO.menu.cpu.atmega328.bootloader.file=atmega/ATmegaBOOT_168_atmega328.hex
+PD+IDE.menu.cpu.atmega328.build.mcu=atmega328p
 
-PAIR_NANO.menu.cpu.atmega328.build.mcu=atmega328p
+PD+IDE.menu.cpu.atmega168=ATmega168
 
+PD+IDE.menu.cpu.atmega168.upload.maximum_size=14336
+PD+IDE.menu.cpu.atmega168.upload.maximum_data_size=1024
+PD+IDE.menu.cpu.atmega168.upload.speed=19200
 
-PAIR_NANO.menu.cpu.atmega168=ATmega168
+PD+IDE.menu.cpu.atmega168.bootloader.high_fuses=0xdd
+PD+IDE.menu.cpu.atmega168.bootloader.extended_fuses=0x00
+PD+IDE.menu.cpu.atmega168.bootloader.file=atmega/ATmegaBOOT_168_diecimila.hex
 
-PAIR_NANO.menu.cpu.atmega168.upload.maximum_size=14336
-PAIR_NANO.menu.cpu.atmega168.upload.maximum_data_size=1024
-PAIR_NANO.menu.cpu.atmega168.upload.speed=19200
-
-PAIR_NANO.menu.cpu.atmega168.bootloader.low_fuses=0xff
-PAIR_NANO.menu.cpu.atmega168.bootloader.high_fuses=0xdd
-PAIR_NANO.menu.cpu.atmega168.bootloader.extended_fuses=0x00
-PAIR_NANO.menu.cpu.atmega168.bootloader.file=atmega/ATmegaBOOT_168_diecimila.hex
-
-PAIR_NANO.menu.cpu.atmega168.build.mcu=atmega168
+PD+IDE.menu.cpu.atmega168.build.mcu=atmega168
 
 ##############################################################
 
-mega.name=Pair Mega PM+
+PN+D.name=Pair PN+
 
-mega.vid.0=0x2341
-mega.pid.0=0x0010
-mega.vid.1=0x2341
-mega.pid.1=0x0042
+PN+D.upload.tool=avrdude
+PN+D.upload.protocol=arduino
 
-mega.upload.tool=avrdude
-mega.upload.maximum_data_size=8192
+PN+D.bootloader.tool=avrdude
+PN+D.bootloader.unlock_bits=0x3F
+PN+D.bootloader.lock_bits=0x0F
 
-mega.bootloader.tool=avrdude
-mega.bootloader.low_fuses=0xFF
-mega.bootloader.unlock_bits=0x3F
-mega.bootloader.lock_bits=0x0F
+PN+D.build.f_cpu=16000000L
+PN+D.build.board=AVR_NANO
+PN+D.build.core=Pair
+PN+D.build.variant=eightanaloginputs
 
-mega.build.f_cpu=16000000L
-mega.build.core=Pair Mega
-mega.build.variant=mega
+PN+D.menu.cpu.atmega328=ATmega328
 
-mega.build.board=AVR_MEGA2560
+PN+D.menu.cpu.atmega328.upload.maximum_size=30720
+PN+D.menu.cpu.atmega328.upload.maximum_data_size=2048
+PN+D.menu.cpu.atmega328.upload.speed=57600
 
-mega.menu.cpu.atmega2560=ATmega2560 (Mega 2560)
+PN+D.menu.cpu.atmega328.bootloader.low_fuses=0xFF
+PN+D.menu.cpu.atmega328.bootloader.high_fuses=0xDA
+PN+D.menu.cpu.atmega328.bootloader.extended_fuses=0x05
+PN+D.menu.cpu.atmega328.bootloader.file=atmega/ATmegaBOOT_168_atmega328.hex
 
-mega.menu.cpu.atmega2560.upload.protocol=wiring
-mega.menu.cpu.atmega2560.upload.maximum_size=253952
-mega.menu.cpu.atmega2560.upload.speed=115200
+PN+D.menu.cpu.atmega328.build.mcu=atmega328p
 
-mega.menu.cpu.atmega2560.bootloader.high_fuses=0xD8
-mega.menu.cpu.atmega2560.bootloader.extended_fuses=0xFD
-mega.menu.cpu.atmega2560.bootloader.file=stk500v2/stk500boot_v2_mega2560.hex
+PN+D.menu.cpu.atmega168=ATmega168
 
-mega.menu.cpu.atmega2560.build.mcu=atmega2560
-mega.menu.cpu.atmega2560.build.board=AVR_MEGA2560
+PN+D.menu.cpu.atmega168.upload.maximum_size=14336
+PN+D.menu.cpu.atmega168.upload.maximum_data_size=1024
+PN+D.menu.cpu.atmega168.upload.speed=19200
 
-mega.menu.cpu.atmega1280=ATmega1280
+PN+D.menu.cpu.atmega168.bootloader.low_fuses=0xff
+PN+D.menu.cpu.atmega168.bootloader.high_fuses=0xdd
+PN+D.menu.cpu.atmega168.bootloader.extended_fuses=0x00
+PN+D.menu.cpu.atmega168.bootloader.file=atmega/ATmegaBOOT_168_diecimila.hex
 
-mega.menu.cpu.atmega1280.upload.protocol=arduino
-mega.menu.cpu.atmega1280.upload.maximum_size=126976
-mega.menu.cpu.atmega1280.upload.speed=57600
-
-mega.menu.cpu.atmega1280.bootloader.high_fuses=0xDA
-mega.menu.cpu.atmega1280.bootloader.extended_fuses=0xF5
-mega.menu.cpu.atmega1280.bootloader.file=atmega/ATmegaBOOT_168_atmega1280.hex
-
-mega.menu.cpu.atmega1280.build.mcu=atmega1280
-mega.menu.cpu.atmega1280.build.board=AVR_MEGA
+PN+D.menu.cpu.atmega168.build.mcu=atmega168
 
 ##############################################################
 
-megaADK.name=Pair ADK PA+
+MEGA+PG.name=Pair PM++
 
-megaADK.vid.0=0x2341
-megaADK.pid.0=0x003f
-megaADK.vid.1=0x2341
-megaADK.pid.1=0x0044
+MEGA+PG.vid.0=0x2341
+MEGA+PG.pid.0=0x0010
+MEGA+PG.vid.1=0x2341
+MEGA+PG.pid.1=0x0042
 
-megaADK.upload.tool=avrdude
-megaADK.upload.protocol=wiring
-megaADK.upload.maximum_size=253952
-megaADK.upload.maximum_data_size=8192
-megaADK.upload.speed=115200
+MEGA+PG.upload.tool=avrdude
+MEGA+PG.upload.maximum_data_size=8192
 
-megaADK.bootloader.tool=avrdude
-megaADK.bootloader.low_fuses=0xFF
-megaADK.bootloader.high_fuses=0xD8
-megaADK.bootloader.extended_fuses=0xFD
-megaADK.bootloader.file=stk500v2/stk500boot_v2_mega2560.hex
-megaADK.bootloader.unlock_bits=0x3F
-megaADK.bootloader.lock_bits=0x0F
+MEGA+PG.bootloader.tool=avrdude
+MEGA+PG.bootloader.low_fuses=0xFF
+MEGA+PG.bootloader.unlock_bits=0x3F
+MEGA+PG.bootloader.lock_bits=0x0F
 
-megaADK.build.mcu=atmega2560
-megaADK.build.f_cpu=16000000L
-megaADK.build.board=AVR_ADK
-megaADK.build.core=Pair
-megaADK.build.variant=mega
+MEGA+PG.build.f_cpu=16000000L
+MEGA+PG.build.core=Pair
+MEGA+PG.build.variant=mega
+MEGA+PG.build.board=AVR_MEGA2560
 
-##############################################################
+MEGA+PG.menu.cpu.atmega2560=ATmega2560 (Mega 2560)
 
-leonardo_pair.name=Pair lenardo BL+
-leonardo_pair.vid.0=0x2341
-leonardo_pair.pid.0=0x0036
-leonardo_pair.vid.1=0x2341
-leonardo_pair.pid.1=0x8036
-leonardo_pair.upload.tool=avrdude
-leonardo_pair.upload.protocol=avr109
-leonardo_pair.upload.maximum_size=28672
-leonardo_pair.upload.maximum_data_size=2560
-leonardo_pair.upload.speed=57600
-leonardo_pair.upload.disable_flushing=true
-leonardo_pair.upload.use_1200bps_touch=true
-leonardo_pair.upload.wait_for_upload_port=true
+MEGA+PG.menu.cpu.atmega2560.upload.protocol=wiring
+MEGA+PG.menu.cpu.atmega2560.upload.maximum_size=253952
+MEGA+PG.menu.cpu.atmega2560.upload.speed=115200
 
-leonardo_pair.bootloader.tool=avrdude
-leonardo_pair.bootloader.low_fuses=0xff
-leonardo_pair.bootloader.high_fuses=0xd8
-leonardo_pair.bootloader.extended_fuses=0xcb
-leonardo_pair.bootloader.file=caterina/Caterina-Leonardo.hex
-leonardo_pair.bootloader.unlock_bits=0x3F
-leonardo_pair.bootloader.lock_bits=0x2F
+MEGA+PG.menu.cpu.atmega2560.bootloader.high_fuses=0xD8
+MEGA+PG.menu.cpu.atmega2560.bootloader.extended_fuses=0xFD
+MEGA+PG.menu.cpu.atmega2560.bootloader.file=stk500v2/stk500boot_v2_mega2560.hex
 
-leonardo_pair.build.mcu=atmega32u4
-leonardo_pair.build.f_cpu=16000000L
-leonardo_pair.build.vid=0x2341
-leonardo_pair.build.pid=0x8036
-leonardo_pair.build.board=AVR_LEONARDO
-leonardo_pair.build.core=core
-leonardo_pair.build.variant=leonardo_pair
-leonardo_pair.build.extra_flags={build.usb_flags}
+MEGA+PG.menu.cpu.atmega2560.build.mcu=atmega2560
+MEGA+PG.menu.cpu.atmega2560.build.board=AVR_MEGA2560
+
+MEGA+PG.menu.cpu.atmega1280=ATmega1280
+
+MEGA+PG.menu.cpu.atmega1280.upload.protocol=arduino
+MEGA+PG.menu.cpu.atmega1280.upload.maximum_size=126976
+MEGA+PG.menu.cpu.atmega1280.upload.speed=57600
+
+MEGA+PG.menu.cpu.atmega1280.bootloader.high_fuses=0xDA
+MEGA+PG.menu.cpu.atmega1280.bootloader.extended_fuses=0xF5
+MEGA+PG.menu.cpu.atmega1280.bootloader.file=atmega/ATmegaBOOT_168_atmega1280.hex
+
+MEGA+PG.menu.cpu.atmega1280.build.mcu=atmega1280
+MEGA+PG.menu.cpu.atmega1280.build.board=AVR_MEGA
 
 ##############################################################
 
-micro.name=Pair Micro32u4 ++AM
-micro.upload.tool=avrdude
-micro.upload.protocol=avr109
-micro.upload.maximum_size=28672
-micro.upload.maximum_data_size=2560
-micro.upload.speed=57600
-micro.upload.disable_flushing=true
-micro.upload.use_1200bps_touch=true
-micro.upload.wait_for_upload_port=true
+ADK+S.name=Pair ADK+
 
-micro.bootloader.tool=avrdude
-micro.bootloader.low_fuses=0xff
-micro.bootloader.high_fuses=0xd8
-micro.bootloader.extended_fuses=0xcb
-micro.bootloader.file=caterina/Caterina-Micro.hex
-micro.bootloader.unlock_bits=0x3F
-micro.bootloader.lock_bits=0x2F
+ADK+S.vid.0=0x2341
+ADK+S.pid.0=0x003f
+ADK+S.vid.1=0x2341
+ADK+S.pid.1=0x0044
 
-micro.build.mcu=atmega32u4
-micro.build.f_cpu=16000000L
-micro.build.vid=0x2341
-micro.build.pid=0x8037
-micro.build.board=AVR_MICRO
-micro.build.core=Pair
-micro.build.variant=micro
-micro.build.extra_flags={build.usb_flags}
+ADK+S.upload.tool=avrdude
+ADK+S.upload.protocol=wiring
+ADK+S.upload.maximum_size=253952
+ADK+S.upload.maximum_data_size=8192
+ADK+S.upload.speed=115200
 
-##############################################################
+ADK+S.bootloader.tool=avrdude
+ADK+S.bootloader.low_fuses=0xFF
+ADK+S.bootloader.high_fuses=0xD8
+ADK+S.bootloader.extended_fuses=0xFD
+ADK+S.bootloader.file=stk500v2/stk500boot_v2_mega2560.hex
+ADK+S.bootloader.unlock_bits=0x3F
+ADK+S.bootloader.lock_bits=0x0F
 
-esplora.name=Pair Explora +PE
-esplora.vid.0=0x2341
-esplora.pid.0=0x003c
-esplora.vid.1=0x2341
-esplora.pid.1=0x803c
-esplora.upload.tool=avrdude
-esplora.upload.protocol=avr109
-esplora.upload.maximum_size=28672
-esplora.upload.maximum_data_size=2560
-esplora.upload.speed=57600
-esplora.upload.disable_flushing=true
-esplora.upload.use_1200bps_touch=true
-esplora.upload.wait_for_upload_port=true
-
-esplora.bootloader.tool=avrdude
-esplora.bootloader.low_fuses=0xff
-esplora.bootloader.high_fuses=0xd8
-esplora.bootloader.extended_fuses=0xcb
-esplora.bootloader.file=caterina/Caterina-Esplora.hex
-esplora.bootloader.unlock_bits=0x3F
-esplora.bootloader.lock_bits=0x2F
-
-esplora.build.mcu=atmega32u4
-esplora.build.f_cpu=16000000L
-esplora.build.vid=0x2341
-esplora.build.pid=0x803c
-esplora.build.board=AVR_ESPLORA
-esplora.build.core=Pair
-esplora.build.variant=leonardo
-esplora.build.extra_flags={build.usb_flags}
+ADK+S.build.mcu=atmega2560
+ADK+S.build.f_cpu=16000000L
+ADK+S.build.board=AVR_ADK
+ADK+S.build.core=Pair
+ADK+S.build.variant=mega
 
 ##############################################################
 
-mini.name=Pair Mini +PMI
+LEARDO+H.name=Pair PL+
+LEARDO+H.vid.0=0x2341
+LEARDO+H.pid.0=0x0036
+LEARDO+H.vid.1=0x2341
+LEARDO+H.pid.1=0x8036
+LEARDO+H.upload.tool=avrdude
+LEARDO+H.upload.protocol=avr109
+LEARDO+H.upload.maximum_size=28672
+LEARDO+H.upload.maximum_data_size=2560
+LEARDO+H.upload.speed=57600
+LEARDO+H.upload.disable_flushing=true
+LEARDO+H.upload.use_1200bps_touch=true
+LEARDO+H.upload.wait_for_upload_port=true
 
-mini.upload.tool=avrdude
-mini.upload.protocol=arduino
+LEARDO+H.bootloader.tool=avrdude
+LEARDO+H.bootloader.low_fuses=0xff
+LEARDO+H.bootloader.high_fuses=0xd8
+LEARDO+H.bootloader.extended_fuses=0xcb
+LEARDO+H.bootloader.file=caterina/Caterina-Leonardo.hex
+LEARDO+H.bootloader.unlock_bits=0x3F
+LEARDO+H.bootloader.lock_bits=0x2F
 
-mini.bootloader.tool=avrdude
-mini.bootloader.low_fuses=0xff
-mini.bootloader.unlock_bits=0x3F
-mini.bootloader.lock_bits=0x0F
-
-mini.build.f_cpu=16000000L
-mini.build.board=AVR_MINI
-mini.build.core=Pair
-mini.build.variant=eightanaloginputs
-
-
-mini.menu.cpu.atmega328=Pair 328
-
-mini.menu.cpu.atmega328.upload.maximum_size=28672
-mini.menu.cpu.atmega328.upload.maximum_data_size=2048
-mini.menu.cpu.atmega328.upload.speed=115200
-
-mini.menu.cpu.atmega328.bootloader.high_fuses=0xd8
-mini.menu.cpu.atmega328.bootloader.extended_fuses=0x05
-mini.menu.cpu.atmega328.bootloader.file=optiboot/optiboot_atmega328-Mini.hex
-
-mini.menu.cpu.atmega328.build.mcu=atmega328p
-
-mini.menu.cpu.atmega168=Pair 168
-
-mini.menu.cpu.atmega168.upload.maximum_size=14336
-mini.menu.cpu.atmega168.upload.maximum_data_size=1024
-mini.menu.cpu.atmega168.upload.speed=19200
-
-mini.menu.cpu.atmega168.bootloader.high_fuses=0xdd
-mini.menu.cpu.atmega168.bootloader.extended_fuses=0x00
-mini.menu.cpu.atmega168.bootloader.file=atmega/ATmegaBOOT_168_ng.hex
-
-mini.menu.cpu.atmega168.build.mcu=atmega168
+LEARDO+H.build.mcu=atmega32u4
+LEARDO+H.build.f_cpu=16000000L
+LEARDO+H.build.vid=0x2341
+LEARDO+H.build.pid=0x8036
+LEARDO+H.build.usb_product="Arduino Leonardo"
+LEARDO+H.build.board=AVR_LEONARDO
+LEARDO+H.build.core=Pair
+LEARDO+H.build.variant=leonardo
+LEARDO+H.build.extra_flags={build.usb_flags}
 
 ##############################################################
 
-ethernet.name=Pair Cloud_Ethernet +PC
+PM+GH.name=Pair  PM+
+PM+GH.upload.tool=avrdude
+PM+GH.upload.protocol=avr109
+PM+GH.upload.maximum_size=28672
+PM+GH.upload.maximum_data_size=2560
+PM+GH.upload.speed=57600
+PM+GH.upload.disable_flushing=true
+PM+GH.upload.use_1200bps_touch=true
+PM+GH.upload.wait_for_upload_port=true
 
-ethernet.upload.tool=avrdude
-ethernet.upload.protocol=arduino
-ethernet.upload.maximum_size=32256
-ethernet.upload.maximum_data_size=2048
-ethernet.upload.speed=115200
+PM+GH.bootloader.tool=avrdude
+PM+GH.bootloader.low_fuses=0xff
+PM+GH.bootloader.high_fuses=0xd8
+PM+GH.bootloader.extended_fuses=0xcb
+PM+GH.bootloader.file=caterina/Caterina-Micro.hex
+PM+GH.bootloader.unlock_bits=0x3F
+PM+GH.bootloader.lock_bits=0x2F
 
-ethernet.bootloader.tool=avrdude
-ethernet.bootloader.low_fuses=0xff
-ethernet.bootloader.high_fuses=0xde
-ethernet.bootloader.extended_fuses=0x05
-ethernet.bootloader.file=optiboot/optiboot_atmega328.hex
-ethernet.bootloader.unlock_bits=0x3F
-ethernet.bootloader.lock_bits=0x0F
-
-ethernet.build.variant=ethernet
-ethernet.build.mcu=atmega328p
-ethernet.build.f_cpu=16000000L
-ethernet.build.board=AVR_ETHERNET
-ethernet.build.core=Pair
-
-
-##############################################################
-
-pro.name=Pair P_Mini +PPM
-
-pro.upload.tool=avrdude
-pro.upload.protocol=arduino
-
-pro.bootloader.tool=avrdude
-pro.bootloader.unlock_bits=0x3F
-pro.bootloader.lock_bits=0x0F
-
-pro.build.board=AVR_PRO
-pro.build.core=Pair
-pro.build.variant=eightanaloginputs
-
-
-pro.menu.cpu.16MHzatmega328=Pair ATmega328 (5V, 16 MHz)
-
-pro.menu.cpu.16MHzatmega328.upload.maximum_size=30720
-pro.menu.cpu.16MHzatmega328.upload.maximum_data_size=2048
-pro.menu.cpu.16MHzatmega328.upload.speed=57600
-
-pro.menu.cpu.16MHzatmega328.bootloader.low_fuses=0xFF
-pro.menu.cpu.16MHzatmega328.bootloader.high_fuses=0xDA
-pro.menu.cpu.16MHzatmega328.bootloader.extended_fuses=0x05
-pro.menu.cpu.16MHzatmega328.bootloader.file=atmega/ATmegaBOOT_168_atmega328.hex
-
-pro.menu.cpu.16MHzatmega328.build.mcu=atmega328p
-pro.menu.cpu.16MHzatmega328.build.f_cpu=16000000L
-
-pro.menu.cpu.8MHzatmega328=Pair ATmega328 (3.3V, 8 MHz)
-
-pro.menu.cpu.8MHzatmega328.upload.maximum_size=30720
-pro.menu.cpu.8MHzatmega328.upload.maximum_data_size=2048
-pro.menu.cpu.8MHzatmega328.upload.speed=57600
-
-pro.menu.cpu.8MHzatmega328.bootloader.low_fuses=0xFF
-pro.menu.cpu.8MHzatmega328.bootloader.high_fuses=0xDA
-pro.menu.cpu.8MHzatmega328.bootloader.extended_fuses=0x05
-pro.menu.cpu.8MHzatmega328.bootloader.file=atmega/ATmegaBOOT_168_atmega328_pro_8MHz.hex
-
-pro.menu.cpu.8MHzatmega328.build.mcu=atmega328p
-pro.menu.cpu.8MHzatmega328.build.f_cpu=8000000L
-
-pro.menu.cpu.16MHzatmega168=Pair ATmega168 (5V, 16 MHz)
-
-pro.menu.cpu.16MHzatmega168.upload.maximum_size=14336
-pro.menu.cpu.16MHzatmega168.upload.maximum_data_size=1024
-pro.menu.cpu.16MHzatmega168.upload.speed=19200
-
-pro.menu.cpu.16MHzatmega168.bootloader.low_fuses=0xff
-pro.menu.cpu.16MHzatmega168.bootloader.high_fuses=0xdd
-pro.menu.cpu.16MHzatmega168.bootloader.extended_fuses=0x00
-pro.menu.cpu.16MHzatmega168.bootloader.file=atmega/ATmegaBOOT_168_diecimila.hex
-
-pro.menu.cpu.16MHzatmega168.build.mcu=atmega168
-pro.menu.cpu.16MHzatmega168.build.f_cpu=16000000L
-
-pro.menu.cpu.8MHzatmega168=Pair ATmega168 (3.3V, 8Hz )
-
-pro.menu.cpu.8MHzatmega168.upload.maximum_size=14336
-pro.menu.cpu.8MHzatmega168.upload.maximum_data_size=1024
-pro.menu.cpu.8MHzatmega168.upload.speed=19200
-
-pro.menu.cpu.8MHzatmega168.bootloader.low_fuses=0xc6
-pro.menu.cpu.8MHzatmega168.bootloader.high_fuses=0xdd
-pro.menu.cpu.8MHzatmega168.bootloader.extended_fuses=0x00
-pro.menu.cpu.8MHzatmega168.bootloader.file=atmega/ATmegaBOOT_168_pro_8MHz.hex
-
-pro.menu.cpu.8MHzatmega168.build.mcu=atmega168
-pro.menu.cpu.8MHzatmega168.build.f_cpu=8000000L
+PM+GH.build.mcu=atmega32u4
+PM+GH.build.f_cpu=16000000L
+PM+GH.build.vid=0x2341
+PM+GH.build.pid=0x8037
+PM+GH.build.usb_product="Arduino Micro"
+PM+GH.build.board=AVR_MICRO
+PM+GH.build.core=Pair
+PM+GH.build.variant=micro
+PM+GH.build.extra_flags={build.usb_flags}
 
 ##############################################################
 
-pair_ng.name=Pair NG ++NG
-pair_ng.upload.tool=avrdude
-pair_ng.upload.protocol=arduino
-pair_ng.upload.speed=19200
+MINI+D.name=Pair MINI ++
 
-pair_ng.bootloader.tool=avrdude
-pair_ng.bootloader.unlock_bits=0x3F
-pair_ng.bootloader.lock_bits=0x0F
+MINI+D.upload.tool=avrdude
+MINI+D.upload.protocol=arduino
 
-pair_ng.build.mcu=atmegang
-pair_ng.build.f_cpu=16000000L
-pair_ng.build.board=AVR_NG
-pair_ng.build.core=Pair
-pair_ng.build.variant=standard
+MINI+D.bootloader.tool=avrdude
+MINI+D.bootloader.low_fuses=0xff
+MINI+D.bootloader.unlock_bits=0x3F
+MINI+D.bootloader.lock_bits=0x0F
+
+MINI+D.build.f_cpu=16000000L
+MINI+D.build.board=AVR_MINI
+MINI+D.build.core=Pair
+MINI+D.build.variant=eightanaloginputs
+
+
+MINI+D.menu.cpu.atmega328=1ATmega328
+
+MINI+D.menu.cpu.atmega328.upload.maximum_size=28672
+MINI+D.menu.cpu.atmega328.upload.maximum_data_size=2048
+MINI+D.menu.cpu.atmega328.upload.speed=115200
+
+MINI+D.menu.cpu.atmega328.bootloader.high_fuses=0xd8
+MINI+D.menu.cpu.atmega328.bootloader.extended_fuses=0x05
+MINI+D.menu.cpu.atmega328.bootloader.file=optiboot/optiboot_atmega328-MINI+D.hex
+
+MINI+D.menu.cpu.atmega328.build.mcu=atmega328p
+
+MINI+D.menu.cpu.atmega168=ATmega168
+
+MINI+D.menu.cpu.atmega168.upload.maximum_size=14336
+MINI+D.menu.cpu.atmega168.upload.maximum_data_size=1024
+MINI+D.menu.cpu.atmega168.upload.speed=19200
+
+MINI+D.menu.cpu.atmega168.bootloader.high_fuses=0xdd
+MINI+D.menu.cpu.atmega168.bootloader.extended_fuses=0x00
+MINI+D.menu.cpu.atmega168.bootloader.file=atmega/ATmegaBOOT_168_ng.hex
+
+MINI+D.menu.cpu.atmega168.build.mcu=atmega168
+###############################
+
+PRO+JJ.name= Pair  PP++
+PRO+JJ.upload.tool=avrdude
+PRO+JJ.upload.protocol=arduino
+
+PRO+JJ.bootloader.tool=avrdude
+PRO+JJ.bootloader.unlock_bits=0x3F
+PRO+JJ.bootloader.lock_bits=0x0F
+
+PRO+JJ.build.board=AVR_PRO
+PRO+JJ.build.core=Pair
+PRO+JJ.build.variant=eightanaloginputs
+
+PRO+JJ.menu.cpu.16MHzatmega328=ATmega328 (5V, 16 MHz)
+
+PRO+JJ.menu.cpu.16MHzatmega328.upload.maximum_size=30720
+PRO+JJ.menu.cpu.16MHzatmega328.upload.maximum_data_size=2048
+PRO+JJ.menu.cpu.16MHzatmega328.upload.speed=57600
+
+PRO+JJ.menu.cpu.16MHzatmega328.bootloader.low_fuses=0xFF
+PRO+JJ.menu.cpu.16MHzatmega328.bootloader.high_fuses=0xDA
+PRO+JJ.menu.cpu.16MHzatmega328.bootloader.extended_fuses=0x05
+PRO+JJ.menu.cpu.16MHzatmega328.bootloader.file=atmega/ATmegaBOOT_168_atmega328.hex
+
+PRO+JJ.menu.cpu.16MHzatmega328.build.mcu=atmega328p
+PRO+JJ.menu.cpu.16MHzatmega328.build.f_cpu=16000000L
+
+
+PRO+JJ.menu.cpu.8MHzatmega328=ATmega328 (3.3V, 8 MHz)
+
+PRO+JJ.menu.cpu.8MHzatmega328.upload.maximum_size=30720
+PRO+JJ.menu.cpu.8MHzatmega328.upload.maximum_data_size=2048
+PRO+JJ.menu.cpu.8MHzatmega328.upload.speed=57600
+
+PRO+JJ.menu.cpu.8MHzatmega328.bootloader.low_fuses=0xFF
+PRO+JJ.menu.cpu.8MHzatmega328.bootloader.high_fuses=0xDA
+PRO+JJ.menu.cpu.8MHzatmega328.bootloader.extended_fuses=0x05
+PRO+JJ.menu.cpu.8MHzatmega328.bootloader.file=atmega/ATmegaBOOT_168_atmega328_pro_8MHz.hex
+
+PRO+JJ.menu.cpu.8MHzatmega328.build.mcu=atmega328p
+PRO+JJ.menu.cpu.8MHzatmega328.build.f_cpu=8000000L
+
+PRO+JJ.menu.cpu.16MHzatmega168=ATmega168 (5V, 16 MHz)
+
+PRO+JJ.menu.cpu.16MHzatmega168.upload.maximum_size=14336
+PRO+JJ.menu.cpu.16MHzatmega168.upload.maximum_data_size=1024
+PRO+JJ.menu.cpu.16MHzatmega168.upload.speed=19200
+
+PRO+JJ.menu.cpu.16MHzatmega168.bootloader.low_fuses=0xff
+PRO+JJ.menu.cpu.16MHzatmega168.bootloader.high_fuses=0xdd
+PRO+JJ.menu.cpu.16MHzatmega168.bootloader.extended_fuses=0x00
+PRO+JJ.menu.cpu.16MHzatmega168.bootloader.file=atmega/ATmegaBOOT_168_diecimila.hex
+
+PRO+JJ.menu.cpu.16MHzatmega168.build.mcu=atmega168
+PRO+JJ.menu.cpu.16MHzatmega168.build.f_cpu=16000000L
+
+
+PRO+JJ.menu.cpu.8MHzatmega168=ATmega168 (3.3V, 8 MHz)
+
+PRO+JJ.menu.cpu.8MHzatmega168.upload.maximum_size=14336
+PRO+JJ.menu.cpu.8MHzatmega168.upload.maximum_data_size=1024
+PRO+JJ.menu.cpu.8MHzatmega168.upload.speed=19200
+
+PRO+JJ.menu.cpu.8MHzatmega168.bootloader.low_fuses=0xc6
+PRO+JJ.menu.cpu.8MHzatmega168.bootloader.high_fuses=0xdd
+PRO+JJ.menu.cpu.8MHzatmega168.bootloader.extended_fuses=0x00
+PRO+JJ.menu.cpu.8MHzatmega168.bootloader.file=atmega/ATmegaBOOT_168_pro_8MHz.hex
+
+PRO+JJ.menu.cpu.8MHzatmega168.build.mcu=atmega168
+PRO+JJ.menu.cpu.8MHzatmega168.build.f_cpu=8000000L
+
+
+ng++gh..name=Pair NG++
+
+ng++gh..upload.tool=avrdude
+ng++gh..upload.protocol=arduino
+ng++gh..upload.speed=19200
+
+ng++gh..bootloader.tool=avrdude
+ng++gh..bootloader.unlock_bits=0x3F
+ng++gh..bootloader.lock_bits=0x0F
+
+ng++gh..build.mcu=atmegang
+ng++gh..build.f_cpu=16000000L
+ng++gh..build.board=AVR_NG
+ng++gh..build.core=Pair
+ng++gh..build.variant=standard
+
+
+ng++gh..menu.cpu.atmega168=ATmega168
+
+ng++gh..menu.cpu.atmega168.upload.maximum_size=14336
+ng++gh..menu.cpu.atmega168.upload.maximum_data_size=1024
+
+ng++gh..menu.cpu.atmega168.bootloader.low_fuses=0xff
+ng++gh..menu.cpu.atmega168.bootloader.high_fuses=0xdd
+ng++gh..menu.cpu.atmega168.bootloader.extended_fuses=0x00
+ng++gh..menu.cpu.atmega168.bootloader.file=atmega/ATmegaBOOT_168_ng.hex
+
+ng++gh..menu.cpu.atmega168.build.mcu=atmega168
+
+
+ng++gh..menu.cpu.atmega8=ATmega8
+
+ng++gh..menu.cpu.atmega8.upload.maximum_size=7168
+ng++gh..menu.cpu.atmega8.upload.maximum_data_size=1024
+
+ng++gh..menu.cpu.atmega8.bootloader.low_fuses=0xdf
+ng++gh..menu.cpu.atmega8.bootloader.high_fuses=0xca
+ng++gh..menu.cpu.atmega8.bootloader.file=atmega8/ATmegaBOOT-prod-firmware-2009-11-07.hex
+
+ng++gh..menu.cpu.atmega8.build.mcu=atmega8
+
